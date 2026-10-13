@@ -1,0 +1,20 @@
+% TikZ diagram. Exported as workflow.tex; --precompile renders it as a PDF.
+\begin{tikzpicture}[
+  node distance=5mm and 7mm,
+  stage/.style={draw=blue!60!black, fill=blue!8, rounded corners=2pt,
+    minimum width=24mm, minimum height=10mm, align=center, font=\small},
+  flow/.style={-Stealth, thick},
+]
+  \node[stage] (source) {Source project\\(subfolders)};
+  \node[stage, right=of source] (flatten) {Flatten files\\and references};
+  \node[stage, right=of flatten] (render) {Render figures\\as PDF};
+  \node[stage, below=of render] (prune) {Remove\\unused files};
+  \node[stage, left=of prune] (test) {Test\\compilation};
+  \node[stage, left=of test, fill=green!10, draw=green!40!black] (upload) {Upload to\\Editorial Manager};
+
+  \draw[flow] (source) -- (flatten);
+  \draw[flow] (flatten) -- (render);
+  \draw[flow] (render) -- (prune);
+  \draw[flow] (prune) -- (test);
+  \draw[flow] (test) -- (upload);
+\end{tikzpicture}

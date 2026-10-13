@@ -1,0 +1,15 @@
+% PGFPlots figure with external CSV data. The CSV path is rewritten when the
+% project is flattened; --precompile renders the plot and drops the CSV.
+\begin{tikzpicture}
+  \begin{axis}[
+    width=\columnwidth, height=4.5cm,
+    xlabel={Cycle $\Cycle$}, ylabel={Quality index},
+    xmin=0, xmax=14, ymin=0.2, ymax=1.15,
+    grid=major, legend pos=south east, legend cell align=left,
+  ]
+    \addplot[blue, thick, mark=*, mark size=1pt] table[x=cycle, y=measured, col sep=comma] {./figure/results/results_data.csv};
+    \addlegendentry{Measured}
+    \addplot[black, dashed] table[x=cycle, y=reference, col sep=comma] {./figure/results/results_data.csv};
+    \addlegendentry{Reference}
+  \end{axis}
+\end{tikzpicture}
