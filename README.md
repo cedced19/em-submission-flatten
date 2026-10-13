@@ -250,6 +250,6 @@ Their file headers state version 1.2 or later for `cas-dc.cls` and version
 the files. Get the current template files from Elsevier or CTAN for your own
 manuscript.
 
-The demo manuscript text, `references.bib` and the figure sources in `demo/`
-are dummy content for testing. The repository has no `LICENSE` file for the
-scripts yet. Until one is added, all rights are reserved by the author.
+The scripts, the README and the demo manuscript, `references.bib` and figure
+sources in `demo/` are released under the [MIT License](LICENSE). The MIT
+License does not apply to the Elsevier template files listed above.
