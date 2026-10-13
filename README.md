@@ -237,3 +237,19 @@ them from anywhere.
   the previous submission folder is preserved. LaTeX output from rendering and
   the dependency check is in `precompile_figures.log`, next to the submission
   folder. Test builds log to `test_compilation/latexmk.log`.
+
+## Licenses
+
+The files in `demo/` named `cas-dc.cls`, `cas-common.sty` and
+`cas-model2-names.bst`, and the icons in `demo/thumbnails/`, are part of
+Elsevier's CAS (`cas-dc`) and `elsarticle` template bundles. They are not
+original to this repository and are distributed under the
+[LaTeX Project Public License](https://www.latex-project.org/lppl/) (LPPL).
+Their file headers state version 1.2 or later for `cas-dc.cls` and version
+1.3c or later for the other two. Keep those headers when you copy or modify
+the files. Get the current template files from Elsevier or CTAN for your own
+manuscript.
+
+The demo manuscript text, `references.bib` and the figure sources in `demo/`
+are dummy content for testing. The repository has no `LICENSE` file for the
+scripts yet. Until one is added, all rights are reserved by the author.
